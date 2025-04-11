@@ -1,32 +1,23 @@
 import math
 
-def line():
-    A = float(input("Ingrese el coeficiente A:  "))
-    B = float(input("Ingrese el coeficiente B:  "))
-    X1 = float(input("Ingrese el coeficiente X1:  "))
-    X2 = float(input("Ingrese el coeficiente X2:  "))
+pendiente=float(input("Ingrese el coeficiente A: "))
+ordenada=float(input("Ingrese el coeficiente B: "))
 
-    # Calcular valores de Y
-    Y1 = A * X1 + B
-    Y2 = A * X2 + B
+x1=float(input("Ingrese el coeficiente X1: "))
+x2=float(input("Ingrese el coeficiente X2: "))
 
-    # Mostrar coeficientes ingresados
-    print(f"\nEl coeficiente A de su ecuación de la recta es: {A}")
-    print(f"El coeficiente B de su ecuación de la recta es: {B}")
-    print(f"El coeficiente X1 de su ecuación de la recta es: {X1}")
-    print(f"El coeficiente X2 de su ecuación de la recta es: {X2}")
+print(f"El coeficiente A de su ecuación de la recta es: {pendiente}")
+print(f"El coeficiente B de su ecuación de la recta es: {ordenada}")
+print(f"El coeficiente X1 de su ecuación de la recta es: {x1}")
+print(f"El coeficiente X2 de su ecuación de la recta es: {x2}\n")
 
-    # Mostrar la ecuación
-    print("\nPara la siguiente ecuación:")
-    print(f"\tY = {A}X + {B}")
+print(f"Para la siguiente ecuación:\n \tY = {pendiente}X + {ordenada}\n")
 
-    # Mostrar los puntos
-    print(f"\nDados los siguientes puntos:")
-    print(f"\tP1 ({X1}, {Y1})")
-    print(f"\tP2 ({X2}, {Y2})")
+y1=float((pendiente*x1) + ordenada)
+y2=float((pendiente*x2) + ordenada)
 
-    # Calcular la distancia
-    distancia = math.sqrt((X2 - X1)**2 + (Y2 - Y1)**2)
-    print(f"\nLa distancia entre ellos es: {distancia}")
+print(f"Dados los siguientes puntos:\n \tP1 ({x1}, {y1}) \n \tP2 ({x2}, {y2})\n")
 
-#line()
+distancia = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+print(f"La distancia entre ellos es: {distancia}")
